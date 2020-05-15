@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+        div.of {
+            border: 1px solid black;
+            font: 16pt Arial;
+            background-color: rgb(219, 219, 219);
+            margin-top: 20px;
+            padding: 10px;
+        }
+
+        ul {
+            padding-left: 0px;
+            display: flex;
+        }
+
+        li {
+            border: 1px solid rgb(0, 60, 255);
+            list-style-type: none;
+            padding: 8px;
+            margin: 5px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #row ul {
+            flex-direction: row;
+        }
+
+        #row-reverse ul {
+            flex-direction: row-reverse;
+        }
+
+        #column ul {
+            flex-direction: column;
+        }
+
+        #column-reverse ul {
+            flex-direction: column-reverse;
+        }
+
+        #nowrap ul {
+            flex-wrap: nowrap;
+        }
+
+        #wrap ul {
+            flex-wrap: wrap;
+        }
+
+        #wrap-reverse ul {
+            flex-wrap: wrap-reverse;
+        }
+
+        #jc-flex-start ul {
+            justify-content: flex-start;
+        }
+
+        #jc-flex-end ul {
+            justify-content: flex-end;
+        }
+
+        #jc-center ul {
+            justify-content: center;
+        }
+
+        #jc-space-between ul {
+            justify-content: space-between;
+        }
+
+        #jc-space-around ul {
+            justify-content: space-around;
+        }
+
+        #ai-flex-start ul {
+            align-items: flex-start;
+        }
+
+        #ai-flex-end ul {
+            align-items: flex-end;
+        }
+
+        #ai-center ul {
+            align-items: center;
+        }
+
+        #ai-stretch ul {
+            align-items: stretch;
+        }
+
+        #ai-baseline ul {
+            align-items: baseline;
+        }
+
+        #ac-flex-start ul {
+            align-content: flex-start;
+            flex-wrap: wrap;
+        }
+
+        #ac-flex-end ul {
+            align-content: flex-end;
+            flex-wrap: wrap;
+        }
+
+        #ac-center ul {
+            align-content: center;
+            flex-wrap: wrap;
+        }
+
+        #ac-stretch ul {
+            align-content: stretch;
+            flex-wrap: wrap;
+        }
+
+        #ac-space-between ul {
+            align-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        #ac-space-around ul {
+            align-content: space-between;
+            flex-wrap: wrap;
+        }
+        #as-flex-end  {
+            align-self: flex-end;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="of">
+        <p>.container {display: flex;}
+        </p>
+        <ul>
+            <li><a href="">Главная</a></li>
+            <li><a href="">Контакты для свзяь</a></li>
+            <li><a href="">Информация о том как нас найти</a></li>
+            <li><a href="">Работа</a></li>
+            <li><a href="">Обучение</a></li>
+        </ul>
+    </div>
+
+    <div class="of">
+        <p>.container {flex-direction: row;}
+        </p>
+        <div>
+            <ul>
+                <li><a href="">Главная</a></li>
+                <li><a href="">Контакты для свзяь</a></li>
+                <li><a href="">Информация о том как нас найти</a></li>
+                <li><a href="">Работа</a></li>
+                <li><a href="">Обучение</a></li>
+            </ul>
+        </div>
+        <hr size="5" noshade="">
+        <p>.container {flex-direction: row-reverse;}
+        </p>
+        <div id="row-reverse">
+            <ul>
+                <li><a href="">Главная</a></li>
+                <li><a href="">Контакты для свзяь</a></li>
+                <li><a href="">Информация о том как нас найти</a></li>
+                <li><a href="">Работа</a></li>
+                <li><a href="">Обучение</a></li>
+            </ul>
+        </div>
+        <hr size="5" noshade="">
+        <p>.container {flex-direction: column;}
+        </p>
+        <div id="column">
+            <ul>
+                <li><a href="">Главная</a></li>
+                <li><a href="">Контакты для свзяь</a></li>
+                <li><a href="">Информация о том как нас найти</a></li>
+                <li><a href="">Работа</a></li>
+                <li><a href="">Обучение</a></li>
+            </ul>
+        </div>
+        <hr size="5" noshade="">
+        <p>.container {flex-direction: column-reverse;}
+        </p>
+        <div id="column-reverse">
+            <ul>
+                <li><a href="">Главная</a></li>
+                <li><a href="">Контакты для свзяь</a></li>
+                <li><a href="">Информация о том как нас найти</a></li>
+                <li><a href="">Работа</a></li>
+                <li><a href="">Обучение</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="of">
+        <p>.container {flex-wrap: nowrap;}
+        </p>
+        <div id="nowrap">
+            <ul>
+                <li><a href="">Главная</a></li>
+                <li><a href="">Контакты для свзяь</a></li>
+                <li><a href="">Информация о том как нас найти</a></li>
+                <li><a href="">Работа</a></li>
+                <li><a href="">Обучение</a></li>
+            </ul>
+        </div>
+        <hr size="5" noshade="">
+        <p>.container {flex-wrap: wrap;}
+        </p>
+        <div id="wrap">
+            <ul>
+                <li><a href="">Главная</a></li>
+                <li><a href="">Контакты для свзяь</a></li>
+                <li><a href="">Информация о том как нас найти</a></li>
+                <li><a href="">Работа</a></li>
+                <li><a href="">Обучение</a></li>
+            </ul>
+        </div>
+        <hr size="5" noshade="">
+        <p>.container {flex-wrap: wrap-reverse;}
+        </p>
+        <div id="wrap-reverse">
+            <ul>
+                <li><a href="">Главная</a></li>
+                <li><a href="">Контакты для свзяь</a></li>
+                <li><a href="">Информация о том как нас найти</a></li>
+                <li><a href="">Работа</a></li>
+                <li><a href="">Обучение</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="of">
+        <p>.container {justify-content: flex-start;}
+        </p>
+        <div id="jc-flex-start">
+            <ul>
+                <li><a href="">Главная</a></li>
+                <li><a href="">Контакты для свзяь</a></li>
+                <li><a href="">Информация о том как нас найти</a></li>
+                <li><a href="">Работа</a></li>
+                <li><a href="">Обучение</a></li>
+            </ul>
+        </div>
+        <hr size="5" noshade="">
+        <p>.container {justify-content: flex-end;}
+        </p>
+        <div id="jc-flex-end">
+            <ul>
+                <li><a href="">Главная</a></li>
+                <li><a href="">Контакты для свзяь</a></li>
+                <li><a href="">Информация о том как нас найти</a></li>
+                <li><a href="">Работа</a></li>
+                <li><a href="">Обучение</a></li>
+            </ul>
+        </div>
+        <hr size="5" noshade="">
+        <p>.container {justify-content: center;}
+        </p>
+        <div id="jc-center">
+            <ul>
+                <li><a href="">Главная</a></li>
+                <li><a href="">Контакты для свзяь</a></li>
+                <li><a href="">Информация о том как нас найти</a></li>
+                <li><a href="">Работа</a></li>
+                <li><a href="">Обучение</a></li>
+            </ul>
+        </div>
+        <hr size="5" noshade="">
+        <p>.container {
+            justify-content: space-between;}
+        </p>
+        <div id="jc-space-between">
+            <ul>
+                <li><a href="">Главная</a></li>
+                <li><a href="">Контакты для свзяь</a></li>
+                <li><a href="">Информация о том как нас найти</a></li>
+                <li><a href="">Работа</a></li>
+                <li><a href="">Обучение</a></li>
+            </ul>
+        </div>
+        <hr size="5" noshade="">
+        <p>.container {
+            justify-content: space-around;}
+        </p>
+        <div id="jc-space-around">
+            <ul>
+                <li><a href="">Главная</a></li>
+                <li><a href="">Контакты для свзяь</a></li>
+                <li><a href="">Информация о том как нас найти</a></li>
+                <li><a href="">Работа</a></li>
+                <li><a href="">Обучение</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="of">
+        <p>.container {align-items: flex-start;}
+        </p>
+        <div id="ai-flex-start">
+            <ul>
+                <li><a href="">Главная</a></li>
+                <li><a href="">Контакты для свзяь</a></li>
+                <li><a href="">Информация о том как нас найти</a></li>
+                <li><a href="">Работа</a></li>
+                <li><a href="">Обучение</a></li>
+            </ul>
+        </div>
+        <hr size="5" noshade="">
+        <p>.container {align-items: flex-end;}
+        </p>
+        <div id="ai-flex-end">
+            <ul>
+                <li><a href="">Главная</a></li>
+                <li><a href="">Контакты для свзяь</a></li>
+                <li><a href="">Информация о том как нас найти</a></li>
+                <li><a href="">Работа</a></li>
+                <li><a href="">Обучение</a></li>
+            </ul>
+        </div>
+        <hr size="5" noshade="">
+        <p>.container {align-items: center;}
+        </p>
+        <div id="ai-center">
+            <ul>
+                <li><a href="">Главная</a></li>
+                <li><a href="">Контакты для свзяь</a></li>
+                <li><a href="">Информация о том как нас найти</a></li>
+                <li><a href="">Работа</a></li>
+                <li><a href="">Обучение</a></li>
+            </ul>
+        </div>
+        <hr size="5" noshade="">
+        <p>.container {align-items: stretch;}
+        </p>
+        <div id="ai-stretch">
+            <ul>
+                <li><a href="">Главная</a></li>
+                <li><a href="">Контакты для свзяь</a></li>
+                <li><a href="">Информация о том как нас найти</a></li>
+                <li><a href="">Работа</a></li>
+                <li><a href="">Обучение</a></li>
+            </ul>
+        </div>
+        <hr size="5" noshade="">
+        <p>.container {align-items: baseline;}
+        </p>
+        <div id="ai-baseline">
+            <ul>
+                <li><a href="">Главная</a></li>
+                <li><a href="">Контакты для свзяь</a></li>
+                <li><a href="">Информация о том как нас найти</a></li>
+                <li><a href="">Работа</a></li>
+                <li><a href="">Обучение</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="of">
+        <p>.container {align-content: flex-start;}
+        </p>
+        <div id="ac-flex-start" style="border: 1px solid black; height: 300px;">
+            <ul>
+                <li><a href="">Главная</a></li>
+                <li><a href="">Контакты для свзяь</a></li>
+                <li><a href="">Информация о том как нас найти</a></li>
+                <li><a href="">Работа</a></li>
+                <li><a href="">Обучение</a></li>
+            </ul>
+        </div>
+        <hr size="5" noshade="">
+        <p>.container {align-content: flex-end;}
+        </p>
+        <div id="ac-flex-end" style="border: 1px solid black; height: 300px;">
+            <ul>
+                <li><a href="">Главная</a></li>
+                <li><a href="">Контакты для свзяь</a></li>
+                <li><a href="">Информация о том как нас найти</a></li>
+                <li><a href="">Работа</a></li>
+                <li><a href="">Обучение</a></li>
+            </ul>
+        </div>
+        <hr size="5" noshade="">
+        <p>.container {align-content: center;}
+        </p>
+        <div id="ac-center" style="border: 1px solid black; height: 300px;">
+            <ul>
+                <li><a href="">Главная</a></li>
+                <li><a href="">Контакты для свзяь</a></li>
+                <li><a href="">Информация о том как нас найти</a></li>
+                <li><a href="">Работа</a></li>
+                <li><a href="">Обучение</a></li>
+            </ul>
+        </div>
+        <hr size="5" noshade="">
+        <p>.container {align-content: stretch;}
+        </p>
+        <div id="ac-stretch" style="border: 1px solid black; height: 300px;">
+            <ul>
+                <li><a href="">Главная</a></li>
+                <li><a href="">Контакты для свзяь</a></li>
+                <li><a href="">Информация о том как нас найти</a></li>
+                <li><a href="">Работа</a></li>
+                <li><a href="">Обучение</a></li>
+            </ul>
+        </div>
+        <hr size="5" noshade="">
+        <p>.container {align-content: space-between;}
+        </p>
+        <div id="ac-space-between" style="border: 1px solid black; height: 300px;">
+            <ul>
+                <li><a href="">Главная</a></li>
+                <li><a href="">Контакты для свзяь</a></li>
+                <li><a href="">Информация о том как нас найти</a></li>
+                <li><a href="">Работа</a></li>
+                <li><a href="">Обучение</a></li>
+            </ul>
+        </div>
+        <hr size="5" noshade="">
+        <p>.container {align-content: space-around;}
+        </p>
+        <div id="ac-space-around" style="border: 1px solid black; height: 300px;">
+            <ul>
+                <li><a href="">Главная</a></li>
+                <li><a href="">Контакты для свзяь</a></li>
+                <li><a href="">Информация о том как нас найти</a></li>
+                <li><a href="">Работа</a></li>
+                <li><a href="">Обучение</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="of">
+        <p>.item {order: "integer";}
+        </p>
+        <ul>
+            <li><a href="">Главная</a></li>
+            <li style="order: -1;"><a href="">Контакты для свзяь</a></li>
+            <li style="order: -2;"><a href="">Информация о том как нас найти</a></li>
+            <li style="order: 5;"><a href="">Работа</a></li>
+            <li style="order: 6;"><a href="">Обучение</a></li>
+        </ul>
+    </div>
+
+    <div class="of">
+        <p>.item {flex-grow: "number";}
+        </p>
+        <ul>
+            <li style="flex-grow: 1;"><a href="">Главная</a></li>
+            <li style="flex-grow: 1;"><a href="">Контакты для свзяь</a></li>
+            <li style="flex-grow: 3;"><a href="">Информация о том как нас найти</a></li>
+            <li style="flex-grow: 6;"><a href="">Работа</a></li>
+            <li style="flex-grow: 1;"><a href="">Обучение</a></li>
+        </ul>
+    </div>
+
+    <div class="of">
+        <p>.item {flex-shrink: "number";}
+        </p>
+        <ul>
+            <li style="flex-shrink: 1;"><a href="">Главная</a></li>
+            <li style="flex-shrink: 1;"><a href="">Контакты для свзяь</a></li>
+            <li style="flex-shrink: 1;"><a href="">Информация о том как нас найти</a></li>
+            <li style="flex-shrink: 1;"><a href="">Работа</a></li>
+            <li style="flex-shrink: 6;"><a href="">Обучение</a></li>
+        </ul>
+    </div>
+
+    <div class="of">
+        <p>.item {align-self: flex-end;}
+        </p>
+        <div style="border: 1px solid black; height: 300px;">
+            <ul>
+                <li><a href="">Главная</a></li>
+                <li id="as-flex-end"><a href="">Контакты для свзяь</a></li>
+                <li><a href="">Информация о том как нас найти</a></li>
+                <li><a href="">Работа</a></li>
+                <li><a href="">Обучение</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

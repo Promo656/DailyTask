@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .header {
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            align-items: center;
+            margin: 50px;
+        }
+
+        /*         .nav {} */
+
+        ul {
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            list-style-type: none;
+        }
+
+        li {
+            margin: 10px;
+            padding: 20px; /*not nessesary*/
+        }
+
+        a {
+            /* border: 1px solid black; */
+            text-decoration: none;
+            font: 12px Montserrat;
+            color: black;
+        }
+
+        /*         a:link,
+        a:visited {} */
+
+        a:hover {
+            color: rgb(209, 169, 84);
+            font-weight: 600;
+        }
+
+        .container {
+            margin: 50px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .item {
+            position: relative;
+/*              display: flex;
+            flex-direction: row;
+            justify-content: space-between; */
+        }
+
+        .fon {
+            position: absolute;
+            bottom: 0;
+            background: rgb(209, 169, 84);
+            opacity: 0.85;
+            height: 160px;
+            width: 100%;
+        }
+        .big, .min {
+            font-family:Montserrat;
+            color: white;
+  /*           opacity: 0.85;
+            height: 160px;
+            width: 100%; */
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo"><img src="logo.png" alt=""></div>
+        <nav class="nav">
+            <ul>
+                <li><a href="">ГЛАВНАЯ</a></li>
+                <li><a href="">SOFIT EVEN HOUSE</a></li>
+                <li><a href="">МЕРОПРИЯТИЯ</a></li>
+                <li><a href="">ТУРИСТАМ</a></li>
+                <li><a href="">КЕЙТЕРИНГ</a></li>
+                <li><a href="">ДЛЯ АГЕНСТВ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="item">
+                <img src="Rectangle 1.png" alt="">
+                <div class="fon">
+                    <p class="big">КОРПОРАТИВЫ
+                        <p class="min"> Отметьте лучший праздник в лучшем дворце Петербурга!</p>
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="Rectangle 2.png" alt="">
+                <div class="fon">
+                    <p></p>
+                    <p></p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="Rectangle 3.png" alt="">
+                <div class="fon">
+                    <p></p>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    
+</body>
+
+</html>
